@@ -3,7 +3,7 @@ function ProductsList({ products, Product, handleClick }) {
   return (
     <div className="divDeItens">
       <ul className="listaDeItens">
-        {products.map((result) => {
+        {products.map((result) => { 
           return (
             <div key={result.id}>
               <li>

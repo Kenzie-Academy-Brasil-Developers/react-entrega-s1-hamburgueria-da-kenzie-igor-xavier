@@ -31,6 +31,7 @@ function App() {
     const item = products.filter((elemento) => {
       return elemento.name.toLowerCase() === filteredProducts;
     });
+    console.log(filteredProducts);
   }
   return (
     <div className="App">
