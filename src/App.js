@@ -21,17 +21,22 @@ function App() {
   }, []);
 
   function handleClick(productId) {
+    const verifica = currentSale.find((elemento) => elemento.id === productId);
+
     const item = products.find((elemento) => elemento.id === productId);
-    setCurrentSale([...currentSale, item]);
+    verifica === undefined
+      ? setCurrentSale([...currentSale, item])
+      : console.log("item repetido");
     setCartTotal(
       currentSale.reduce((acc, item) => acc + item.price, item.price)
     );
+    console.log(verifica);
   }
+
   function showProducts(filteredProducts) {
     const item = products.filter((elemento) => {
       return elemento.name.toLowerCase() === filteredProducts;
     });
-    console.log(filteredProducts);
   }
   return (
     <div className="App">
