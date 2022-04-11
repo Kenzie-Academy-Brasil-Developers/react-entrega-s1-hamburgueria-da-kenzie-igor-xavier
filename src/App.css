@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #f5f5f5;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  color: #333333;
+  padding: 19px 109px;
+}
+.divPrincipal {
+  display: flex;
+  flex-direction: row;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+h5 {
+  color: #eb5757;
+  font-size: 20px;
+}
+.App-link {
+  color: #61dafb;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px 0px 15px;
+  width: 365px;
+  height: 60px;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+form:hover {
+  border: 2px solid black;
+}
+input {
+  border: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  width: 106px;
+  height: 40px;
+  background: #27ae60;
+  color: white;
+  font-size: 13px;
+  border: 2px solid #27ae60;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+button:hover {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  background: #93d7af;
+  border: 2px solid #93d7af;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 600px) {
+  .divPrincipal {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .listaDeItens {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50%;
+    height: 50vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: -50px;
+  }
+}

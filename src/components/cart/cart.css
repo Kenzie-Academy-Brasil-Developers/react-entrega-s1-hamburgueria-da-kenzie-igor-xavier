@@ -1,0 +1,133 @@
+.carrinho {
+  border-radius: 5px 5px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 363px;
+  height: 100%;
+  border-radius: 0px 0px 5px 5px;
+  margin-right: 10%;
+  background-color: #f5f5f5;
+  margin-top: 35px;
+}
+.carrinhoTitulo {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #27ae60;
+  border-radius: 5px 5px 0px 0px;
+  width: 80%;
+  padding: 10%;
+  text-align: start;
+}
+.cartProducts {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+.nomeDescDiv {
+  margin-top: -70px;
+  margin-left: -20px;
+}
+.imgCart {
+  margin-right: 20px;
+  width: 140px;
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+.imgDivCart {
+  width: 150px;
+}
+.categoriaCart {
+  margin: 0px;
+  padding: 0px;
+}
+.nomeCart {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  margin-right: 30px;
+}
+.removerCart {
+  margin-right: 60px;
+}
+a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #bdbdbd;
+  margin-top: -90px;
+}
+.totalDiv {
+  display: flex;
+  border-top: 2px solid #e0e0e0;
+  width: 100%;
+}
+.total {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+.valorTotal {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #828282;
+  margin-left: 200px;
+}
+a:hover {
+  text-decoration: underline;
+  color: #333333;
+}
+.removerBt {
+  background: #e0e0e0;
+  border: 2px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 16px 0px;
+  width: 343px;
+  height: 60px;
+}
+.removerBt:hover {
+  background-color: #828282;
+  border: none;
+}
+.sacolaVazia {
+  white-space: nowrap;
+}
+.vazio {
+  background: #f5f5f5;
+  border-radius: 0px 0px 5px 5px;
+}
+.addItens {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #828282;
+  width: 363px;
+}
+.carrinhoTituloVazio {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #27ae60;
+  border-radius: 5px 5px 0px 0px;
+  width: 80%;
+  padding: 10%;
+  text-align: start;
+}
