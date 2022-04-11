@@ -27,9 +27,12 @@ function App() {
     verifica === undefined
       ? setCurrentSale([...currentSale, item])
       : console.log("item repetido");
-    setCartTotal(
-      currentSale.reduce((acc, item) => acc + item.price, item.price)
-    );
+    verifica === undefined
+      ? setCartTotal(
+          currentSale.reduce((acc, item) => acc + item.price, item.price)
+        )
+      : console.log("item repetido");
+
     console.log(verifica);
   }
 
