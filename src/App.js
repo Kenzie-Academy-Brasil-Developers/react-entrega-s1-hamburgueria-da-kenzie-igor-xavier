@@ -10,6 +10,7 @@ function App() {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
+  const [input, setInput] = useState("");
 
   useEffect(() => {
     axios
@@ -31,38 +32,45 @@ function App() {
       ? setCartTotal(
           currentSale.reduce((acc, item) => acc + item.price, item.price)
         )
-      : console.log("item repetido");
+      : console.log("");
 
     console.log(verifica);
   }
 
-  function showProducts(filteredProducts) {
+  function showProducts(input) {
     const item = products.filter((elemento) => {
-      return elemento.name.toLowerCase() === filteredProducts;
+      return (
+        elemento.name.toLowerCase().includes(input) ||
+        elemento.category.toLowerCase().includes(input)
+      );
     });
+
+    setFilteredProducts(item);
   }
+  const handleFilter = (event) => {
+    event.preventDefault();
+    showProducts(input);
+  };
   return (
     <div className="App">
       <header className="App-header">
         <div className="logo">
           <h1> Burguer </h1> <h5> Kenzie</h5>
         </div>
-        <form onSubmit={(event) => event.preventDefault()}>
+        <form onSubmit={handleFilter}>
           <input
             type="text"
             placeholder="Digitar pesquisa"
             onChange={(event) => {
-              setFilteredProducts(event.target.value);
+              setInput(event.target.value);
             }}
           ></input>
-          <button type="button" onClick={showProducts(filteredProducts)}>
-            Pesquisar
-          </button>
+          <button type="submit">Pesquisar</button>
         </form>
       </header>
       <div className="divPrincipal">
         <ProductsList
-          products={products}
+          products={filteredProducts.length > 0 ? filteredProducts : products}
           Product={Product}
           handleClick={handleClick}
         />
